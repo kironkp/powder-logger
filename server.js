@@ -14,7 +14,7 @@ const passUserToView = require('./middleware/pass-user-to-view.js');
 // Express static middleware:
 const path = require('path')
 const authController = require('./controllers/auth.js');
-const applicationController = require('./controllers/applications.js')
+const applicationController = require('./controllers/rideReports.js')
 const port = process.env.PORT ? process.env.PORT : '3000';
 
 
@@ -47,8 +47,8 @@ app.use(passUserToView)
 app.get('/', (req, res) => {
   // Check if the user is signed in
   if (req.session.user) {
-    // Redirect signed-in users to their applications index
-    res.redirect(`/users/${req.session.user._id}/applications`);
+    // Redirect signed-in users to their rideReport index
+    res.redirect(`/users/${req.session.user._id}/rideReports`);
   } else {
     // Show the homepage for users who are not signed in
     res.render('home.ejs');
@@ -64,8 +64,8 @@ app.get('/', (req, res) => {
 app.use('/auth', authController);
 // checks if user is signed in
 app.use(isSignedIn)
-app.use('/users/:userId/applications', applicationController)
-// allows you to just use / in applications.js for applicationsController
+app.use('/users/:userId/rideReports', applicationController)
+// allows you to just use / in riderReports.js 
 
 // SERVER LISTENER
 app.listen(port, () => {

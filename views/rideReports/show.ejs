@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/show.css" />
+    <title><%= rideReport.rideName %></title>
+  </head>
+<!-- views/rideReports/show.ejs -->
+
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+  <div class="show-body">
+    <div class="show-header">
+      <h1><%= rideReport.rideName %></h1>
+      <div class="show-sidebar">
+        <div class="show-actions">
+          <a
+            href="/users/<%= user._id %>/rideReports/<%= rideReport._id %>/edit"
+          >
+            Edit Ride Report
+          </a>
+          <form
+            action="/users/<%= user._id %>/rideReports/<%= rideReport._id %>?_method=DELETE"
+            method="POST"
+          >
+            <button type="submit">Delete Ride Report</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-conditions">
+      <h2>Conditions were <%= rideReport.conditions %></h2>
+    </div>
+    
+    <div class="show-notes-container">
+      
+      <% if (rideReport.notes) { %>
+      <div class="show-notes">
+        <h2>Notes:</h2>
+        <p><%= rideReport.notes %></p>
+      </div>
+      <% } %>
+    </div>
+    
+  </div>
+</body>
+
+      <!-- // browser only gets POST and GET
+// method = delete is quiry param
+
+// the methodOverride : ?_method=delete is built into method-override
+// method override is in our package.json dependency -->
+
+
+
+</html>

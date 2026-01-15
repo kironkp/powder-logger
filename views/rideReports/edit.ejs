@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Edit</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Editing <%= rideReport.rideName %></h1>
+        <div>
+            <form action="/users/<%= user._id %>/rideReports" method="POST">
+
+            <label for="rideName">Ride Name:</label>
+            <input type="text" name="rideName" id="rideName" />
+
+            <label for="conditions">Conditions:</label>
+            <select id="status" name="status">
+            <option
+            value="Really Bad"
+            <%= rideReport.conditions === "Really Bad" ? "selected" : "" %>
+            >
+            Really Bad
+            </option>
+            <option
+            value="Bas"
+            <%= rideReport.conditions === "Bas" ? "selected" : "" %>
+            >
+            Bas
+            </option>
+            <option
+            value="So-So"
+            <%= rideReport.conditions === "So-So" ? "selected" : "" %>
+            >
+            So-So
+            </option>
+            <option
+            value="Good"
+            <%= rideReport.conditions === "Good" ? "selected" : "" %>
+            >
+            Good
+            </option>
+            <option
+            value="Incredible"
+            <%= rideReport.conditions === "Incredible" ? "selected" : "" %>
+            >
+            Incredible
+            </option>
+            </select>
+        
+            <label for="notes">Notes:</label>
+            <textarea name="notes" id="notes"></textarea>
+
+            <button type="submit">Add Ride</button>
+            </form>
+        
+        </div>
+</body>
+</html>

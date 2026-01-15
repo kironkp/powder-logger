@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Your Ride Reports</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Your Ride Reports</h1>
+    <a href="/users/<%=user._id%>/rideReports/new">Add a Ride Report</a>
+    <ul>
+        <% rideReports.forEach((rideReport)=>{ %>
+        <li>
+            <!-- Add a link around each application, directing to the 'show' page -->
+            <a href="/users/<%= user._id %>/rideReports/<%= rideReport._id %>">
+            <%= rideReport.rideName %> when conditions were <%= rideReport.conditions %>
+            </a>
+        </li>
+        <% }) %>
+    </ul>
+  </body>
+</html>

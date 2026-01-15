@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Add a New Ride Report</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Add a New Ride Report</h1>
+    <div class="new-body">
+        <form action="/users/<%= user._id %>/rideReports" method="POST">
+
+        <label for="rideName">Ride Name:</label>
+        <input type="text" name="rideName" id="rideName" />
+
+        <label for="conditions">Conditions:</label>
+        <select id="conditions" name="conditions">
+        <option value="Really Bad">Really Bad</option>
+        <option value="Bad">Bas</option>
+        <option value="So-So">So-So</option>
+        <option value="Good">Good</option>
+        <option value="Incredible">Incredible</option>
+        </select>
+      
+        <label for="notes">Notes:</label>
+        <textarea name="notes" id="notes"></textarea>
+
+        <button type="submit">Add Ride</button>
+        </form>
+    </div>
+  </body>
+</html>
