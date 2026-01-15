@@ -1,0 +1,9 @@
+AAU, I should be able to sign up, sign in, and sign out.
+
+AAU, I should be able to go to a page and see all my Ride Reports.
+
+AAU, I should see a form to add a new Ride Report. I should be able to choose the from a drop-down how good the ride conditions were and have a box that allows me to input more notes if needed.
+
+AAU, I should be able to click a Ride Report and see the ride conditions and more details.
+
+AAU, I should be able to edit the ride conditions and the description of a Ride Report.
