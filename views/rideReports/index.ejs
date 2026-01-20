@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Your Ride Reports</title>
   </head>
-  <body>
+  <body class="index-body">
     <%- include('../partials/_navbar.ejs') %>
     <h1>Your Ride Reports</h1>
-    <a href="/users/<%=user._id%>/rideReports/new">Add a Ride Report</a>
-    <ul>
+    <a class="signup-link" href="/users/<%=user._id%>/rideReports/new">Add a Ride Report</a>
+    <ul class="index-container">
         <% rideReports.forEach((rideReport)=>{ %>
-        <li>
+        <li class="index-list">
             <!-- Add a link around each application, directing to the 'show' page -->
             <a href="/users/<%= user._id %>/rideReports/<%= rideReport._id %>">
             <%= rideReport.rideName %> when conditions were <%= rideReport.conditions %>

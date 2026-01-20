@@ -13,7 +13,7 @@
             <form action="/users/<%= user._id %>/rideReports" method="POST">
 
             <label for="rideName">Ride Name:</label>
-            <input type="text" name="rideName" id="rideName" />
+            <input type="text" name="rideName" id="rideName" value="<%= rideReport.rideName %>" />
 
             <label for="conditions">Conditions:</label>
             <select id="status" name="status">
@@ -50,7 +50,7 @@
             </select>
         
             <label for="notes">Notes:</label>
-            <textarea name="notes" id="notes"></textarea>
+            <textarea name="notes" id="notes"> <%= rideReport.notes %> </textarea>
 
             <button type="submit">Add Ride</button>
             </form>
