@@ -32,4 +32,4 @@ Tech Stack:
 - nodemon
 
 Next Steps:
-I would like to add a boolean for avalanche risk. I would like users to be able to add photos and videos to a Ride Report
+I would like to add a boolean for avalanche risk. I would like users to be able to add photos and videos to a Ride Report and have a dropdown calendar to add the date. 
