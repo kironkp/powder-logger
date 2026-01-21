@@ -22,10 +22,14 @@ Features:
 - EJS server-rendered views
 
 Tech Stack:
-- Node.js + Express
-- MongoDB + Mongoose
+- bcrypt
+- dotenv
 - EJS
-- express-session authentication
+- express
+- express-session 
+- method-override
+- morgan
+- nodemon
 
 Next Steps:
 I would like to add a boolean for avalanche risk. I would like users to be able to add photos and videos to a Ride Report
