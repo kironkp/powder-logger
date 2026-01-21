@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 body {
+  background-image: url("/images/snowboard-current.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -27,7 +30,7 @@ body {
 }
 
 .show-header > h1 {
-  color: #1c2e5b;
+  color: #ffffff;
   font-size: 3.2em;
   margin-left: 10px;
 }
@@ -70,7 +73,7 @@ button:hover {
 }
 
 .show-actions > a:hover {
-  background-color: #1c2e5b;
+  background-color: #627299;
 }
 
 .show-conditions {
@@ -82,7 +85,7 @@ button:hover {
 }
 
 .show-conditions > h2 {
-  color: #1c2e5b;
+  color: #d4d6dd;
   font-size: 1.5em;
   margin-left: 10px;
 }

@@ -55,12 +55,6 @@ app.get('/', (req, res) => {
   }
 });
 
-// browser only gets POST and GET
-// method = delete is quiry param
-
-// the methodOverride : _method delete is built into method-override
-// method override is in our package.json dependency
-
 app.use('/auth', authController);
 // checks if user is signed in
 app.use(isSignedIn)
@@ -68,6 +62,6 @@ app.use('/users/:userId/rideReports', applicationController)
 // allows you to just use / in riderReports.js 
 
 // SERVER LISTENER
-app.listen(port, () => {
-  console.log(`The express app is ready on port ${port}!`);
+app.listen(process.env.PORT, () => {
+  console.log(`The express app is ready on port ${process.env.PORT}!`);
 });
